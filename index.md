@@ -4,11 +4,13 @@
 	  function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-			        window.addEventListener("onEmbeddedMessagingReady", () => {
-            embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-                "PreChat_URL": window.location.origin
-            });
-        });
+   			embeddedservice_bootstrap.settings.chatButtonPosition = "1%, 2%"; // Setting chat button position
+			        
+			window.addEventListener("onEmbeddedMessagingReady", () => {
+            			embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+                			"PreChat_URL": window.location.origin
+            			});
+        		});
  
 			embeddedservice_bootstrap.init(
 				'00D300000006Vym',
